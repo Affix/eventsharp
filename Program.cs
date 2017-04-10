@@ -21,12 +21,14 @@ namespace events
     {
       public static void Main(string[] args)
       {
-        if(args[0] == "")
+        if(args.Length == 1)
         {
           SendRequest(args[0]).Wait();
+        }
         else
         {
-          Console.WriteLine("Please enter a location as an Argument!")
+          Console.WriteLine("Please enter a valid argument!");
+          Console.WriteLine("arguments : <location>");
         }
       }
 
