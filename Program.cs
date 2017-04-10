@@ -21,7 +21,13 @@ namespace events
     {
       public static void Main(string[] args)
       {
+        if(args[0] == "")
+        {
           SendRequest(args[0]).Wait();
+        else
+        {
+          Console.WriteLine("Please enter a location as an Argument!")
+        }
       }
 
       private static async Task SendRequest(string location)
